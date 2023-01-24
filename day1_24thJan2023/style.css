@@ -1,0 +1,20 @@
+.site-header{
+    background-color: aqua;
+    color: blue;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+.profile-img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.site-header-content{
+    margin: 10px;
+}
