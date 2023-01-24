@@ -7,3 +7,6 @@ Resource link : https://youtu.be/E8cl_8ktp9M
 ## Tech skills:
 * HTML
 * CSS
+
+## Hosted on Netlify
+https://kmd-site.netlify.app/
