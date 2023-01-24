@@ -1,8 +1,12 @@
 .site-header{
-    background-color: aqua;
+    background-color: rgb(105, 234, 234);
     color: blue;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;              /*flex works only on direct child n it's siblings, not on grandchild, so moved img to one step higher to come directly under site-header*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 body{
@@ -13,8 +17,13 @@ body{
     border-radius: 50%;
     height: 200px;
     width: 200px;
+    box-shadow: black 2px 5px 5px;
 }
 
 .site-header-content{
     margin: 10px;
+}
+
+#course-link{
+    color: blue;
 }
