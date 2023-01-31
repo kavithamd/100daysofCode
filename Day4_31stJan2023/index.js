@@ -131,14 +131,50 @@ let totAge = ages.reduce((tot, age) => tot += age, 2);
 
 //filter
 let ag = ages.filter(age => age > 50);
-console.log(ag);
+// console.log(ag);
 
 //map
 let age1 = ages.map(age => age * 2);
-console.log(age1);
+// console.log(age1);
 //sort
 let sortAge = ages.sort((a,b)=> a-b)
-console.log(sortAge);
+// console.log(sortAge);
 //reduce
 let sumage = ages.reduce((total, age) => total += age, 0)
-console.log(sumage);
+// console.log(sumage);
+
+//closures
+
+var sum = function (a) {
+    // console.log('a from sum function = ', a);
+    c = 2;
+    return function (b) {
+        return a + b + c;
+    }
+}
+
+var store = sum(2);
+// console.log(store(0));
+
+// a closure gives you access to an outer function's scope from an inner function. closures are created every time a function is created, at function creation time.
+
+// A lexical scope in JavaScript means that a variable defined outside a function can be accessible inside another function defined after the variable declaration. But the opposite is not true; the variables defined inside a function will not be accessible outside that function.
+
+// A closure in JavaScript is a feature where an inner function has access to the outer (enclosing) function's variables — a scope chain. Closures in Javascript are created along with the function. Lexical scoping is the environment that holds the variables of the current scope as well as the outer scope.
+
+//another example of closures with multiple return functions
+
+let sum1 = function (a, b, c) {
+    return {
+        getSumTwo:function () {
+            return a + b;
+        },
+        getSumThree: function () {
+            return a + b + c;
+        }
+    }
+}
+
+let store1 = sum1(2, 4, 6);
+console.log(store1.getSumTwo());        //6
+console.log(store1.getSumThree());      //12
